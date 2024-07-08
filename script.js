@@ -1,31 +1,4 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const imageFolder = 'img/'; // Folder where images are stored
-    const imageCount = 48; // Total number of images (adjust accordingly)
-    let currentIndex = 1;
-
-    const galleryImage = document.getElementById('galleryImage');
-    const prevButton = document.getElementById('prev');
-    const nextButton = document.getElementById('next');
-
-    function updateImage() {
-        galleryImage.src = `${imageFolder}image${currentIndex}.jpg`;
-    }
-
-    prevButton.addEventListener('click', () => {
-        currentIndex = (currentIndex - 1 + imageCount) % imageCount;
-        if (currentIndex === 0) currentIndex = imageCount;
-        updateImage(currentIndex);
-    });
-
-    nextButton.addEventListener('click', () => {
-        currentIndex = (currentIndex % imageCount) + 1;
-        updateImage(currentIndex);
-    });
-});
-
-
-
-document.addEventListener("DOMContentLoaded", function() {
     const popup = document.getElementById("popup");
     const popupImage = document.getElementById("popup-image");
 
@@ -83,29 +56,29 @@ function searchImages() {
     });
 }
 
-document.addEventListener("DOMContentLoaded", function() {
-    const imageFolder = 'img/'; // Folder where images are stored
-    const imageCount = 48; // Total number of images (adjust accordingly)
-    let currentIndex = 1;
+// document.addEventListener("DOMContentLoaded", function() {
+//     const imageFolder = 'img/'; // Folder where images are stored
+//     const imageCount = 48; // Total number of images (adjust accordingly)
+//     let currentIndex = 1;
 
-    const galleryImage = document.getElementById('galleryImage');
-    const prevButton = document.getElementById('prev');
-    const nextButton = document.getElementById('next');
+//     const galleryImage = document.getElementById('galleryImage');
+//     const prevButton = document.getElementById('prev');
+//     const nextButton = document.getElementById('next');
 
-    function updateImage() {
-        galleryImage.src = `${imageFolder}image${currentIndex}.jpg`;
-    }
+//     function updateImage() {
+//         galleryImage.src = `${imageFolder}image${currentIndex}.jpg`;
+//     }
 
-    prevButton.addEventListener('click', () => {
-        currentIndex = (currentIndex - 1 + imageCount) % imageCount;
-        if (currentIndex === 0) currentIndex = imageCount;
-        updateImage();
-    });
+//     prevButton.addEventListener('click', () => {
+//         currentIndex = (currentIndex - 1 + imageCount) % imageCount;
+//         if (currentIndex === 0) currentIndex = imageCount;
+//         updateImage();
+//     });
 
-    nextButton.addEventListener('click', () => {
-        currentIndex = (currentIndex % imageCount) + 1;
-        updateImage();
-    });
-});
+//     nextButton.addEventListener('click', () => {
+//         currentIndex = (currentIndex % imageCount) + 1;
+//         updateImage();
+//     });
+// });
 
 

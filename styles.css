@@ -253,4 +253,9 @@ background-color: darkslateblue;
   max-height: 80vh;
 }
 
-
+/* #prev {
+  z-index: 2000;
+}
+#next {
+  z-index: 2000;
+} */

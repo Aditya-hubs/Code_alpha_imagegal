@@ -253,4 +253,30 @@ background-color: darkslateblue;
   max-height: 80vh;
 }
 
+.back:hover {
+  background-color: rgb(121, 37, 133);
+  color: white;
+}
+.next:hover {
+  background-color: rgb(121, 37, 133);
+  color: white;
+}
+.backo {
+  border-radius: 50%;
+  background-color:rgb(68, 30, 112);
+  color: white;
+  margin-right: 50px;
+ 
+}
+.next {
+  border-radius: 50%;
+  background-color: rgb(68, 30, 112);
+  color: white;
+  margin-left: 50px;
+}
+.hell{
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
 

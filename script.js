@@ -1,18 +1,35 @@
 document.addEventListener("DOMContentLoaded", function() {
     const popup = document.getElementById("popup");
     const popupImage = document.getElementById("popup-image");
+    let currentIndex = 0;
+    const images = Array.from(document.querySelectorAll(".Image img"));
 
-    document.querySelectorAll(".Image img").forEach(function(img) {
+    function showPopup(index) {
+        currentIndex = index;
+        popupImage.src = images[currentIndex].src;
+        popup.style.display = "flex";
+    }
+
+    document.querySelectorAll(".Image img").forEach(function(img, index) {
         img.addEventListener("click", function() {
-            popupImage.src = img.src;
-            popup.style.display = "flex";
+            showPopup(index);
         });
     });
 
     popup.addEventListener("click", function(e) {
-        if (e.target !== popupImage) {
+        if (e.target !== popupImage && !e.target.classList.contains('popup-nav')) {
             closePopup();
         }
+    });
+
+    document.getElementById('prev').addEventListener('click', function() {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        popupImage.src = images[currentIndex].src;
+    });
+
+    document.getElementById('next').addEventListener('click', function() {
+        currentIndex = (currentIndex + 1) % images.length;
+        popupImage.src = images[currentIndex].src;
     });
 });
 
